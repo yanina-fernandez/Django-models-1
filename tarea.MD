@@ -23,13 +23,24 @@ Recuerde que para poder comenzar a utilizar el Django Admin, es necesario que el
 Los comandos necesarios se encuentran detallados en el archivo README.md
 
 ### 3. Habilitar las entidades en models.py
-Habilite las entidades creadas en clase "Comic" y "wish_list" que se encuentran comentadas en el archivo models.py.
+Habilite la entidad creada en clase "Comic" que se encuentra comentada en el archivo models.py.
 
 ### 4. Personalice el administrador de Django.
 Familiarícese con la aplicación, personalice el administrador de Django utilizando los atributos de admin.py.
 
 ### 5. Genere una nueva entidad en models.py 
-Diseñe una nueva entidad en models.py, colóquele el nombre que usted prefiere y agréguele al menos 5 campos (columnas en la tabla resultante). Debe utilizar al menos un Forign Key.
+Diseñe una nueva entidad en models.py, llamada "wish_list" y agréguele los campos (columnas en la tabla resultante):
+* id
+* user_id
+* comic_id (Este campo debe ser un Foreign Key relacionando el id de la tabla "comic")
+* favorite
+* cart
+* wished_qty
+* buied_qty 
+
+Debe basarse en el siguiente diseño de entidades:
+
+![Entidades](/entidades.png)
 
 ### 6. Nueva entidad en Django Admin.
 Haga que la nueva entidad aparezca en el administrador de Django, recuerde realizar las migraciones previamente y lo trabajado en admin.py
