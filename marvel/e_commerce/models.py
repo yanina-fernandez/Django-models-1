@@ -39,31 +39,3 @@ from django.db import models
 #         es lo que retorna cuando llamamos al objeto.
 #         '''
 #         return f'{self.id}'
-
-
-# class wish_list(models.Model):
-#     id = models.BigAutoField(db_column='ID', primary_key=True)
-#     user_id = models.ForeignKey(User,
-#                                 verbose_name='User',
-#                                 on_delete=models.DO_NOTHING,
-#                                 default=1, blank=True
-#                                 )
-#     comic_id = models.ForeignKey(Comic,
-#                                     verbose_name='Comic',
-#                                     on_delete=models.DO_NOTHING,
-#                                     default=1, blank=True
-#                                     )
-#     favorite = models.BooleanField(
-#         verbose_name='Favorite', default=False)
-#     cart = models.BooleanField(
-#         verbose_name='carts', default=False)
-#     wished_qty = models.PositiveIntegerField(
-#             verbose_name='wished qty', default=0)
-#     buied_qty = models.PositiveIntegerField(
-#             verbose_name='buied qty', default=0)
-            
-#     class Meta:
-#         db_table = 'e_commerce_wish_list'
-
-#     def __str__(self):
-#         return f'{self.id}'

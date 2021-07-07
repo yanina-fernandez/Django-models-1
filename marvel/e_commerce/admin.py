@@ -32,10 +32,3 @@ from django.contrib import admin
     #     }),
     # )
     # pass
-
-
-# @admin.register(wish_list)
-# class wish_listAdmin(admin.ModelAdmin):
-#     list_display = ('user_id', 'comic_id', 'favorite', 'cart')
-#     list_display_links = ('user_id', 'comic_id')
-#     list_filter= ('favorite','cart')
