@@ -42,6 +42,24 @@ Debe basarse en el siguiente diseño de entidades:
 
 ![Entidades](/entidades.png)
 
+Tip:
+El atributo "comic_id" es un campo de tipo FK, para poder implementarlo utilizaremos:
+
+```
+    comic_id = models.ForeignKey(Comic,
+                                 verbose_name='Comic',
+                                 on_delete=models.DO_NOTHING,
+                                 default=1, blank=True
+                                 )
+
+```
+Cuyos argumentos son:
+
+* Comic --> El nombre de la clase que hace referencia a la entidad "comic".
+* on_delete=models.DO_NOTHING --> Hace que al borrar un registro, se borren sus relacionados.
+* default --> Valor por defecto si no se le agrega ninguno.
+* blank --> Permite que se inserte un registro con este campo vacío.
+
 ### 6. Nueva entidad en Django Admin.
 Haga que la nueva entidad aparezca en el administrador de Django, recuerde realizar las migraciones previamente y lo trabajado en admin.py
 
