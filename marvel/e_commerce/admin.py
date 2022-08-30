@@ -33,6 +33,20 @@ class ComicsAdmin(admin.ModelAdmin):
     )
     # pass
     
-    @admin.register(wish_list)
-    class ComicsAdmin(admin.ModelAdmin):
-        pass
+@admin.register(wish_list)
+class ComicsAdmin(admin.ModelAdmin):
+    list_display = ('user_id', 'comic','favorite','cart')
+
+    list_filter= ('user_id','comic')    
+   
+    search_fields = ['comic']
+
+    # fieldsets = (
+    #     (None, {
+    #         'fields': ('id', 'user_id', 'wished_qty','buied_qty')
+    #     }),
+    #     ('Advanced options', {
+    #         'classes': ('collapse',),
+    #         'fields': ('user','deseado', 'comprado'),
+    #     }),
+    # )
